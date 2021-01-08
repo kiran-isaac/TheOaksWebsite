@@ -1,0 +1,50 @@
+@media screen and (max-width: 654px) {
+    aside {
+        width: 100%;
+    }
+
+    aside img {
+        width: 100%;
+        border: none;
+    }
+
+    #body {
+        text-align: center;
+    }
+
+    header a#clubname {
+        font-size: 30px;
+    }
+
+    #mobiledisplay {
+        display: inline-block;
+        width: 100%;
+        position: absolute;
+        top: 400px;
+        z-index: 1;
+    }
+
+    footer {
+        height: 170px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    header a#clubname {
+        font-size: 20px;
+    }
+
+    #body h1 {
+        font-size: 40px;
+    }
+
+    header nav ul li a {
+        line-height: 60px;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    img#whatthechildrensay {
+        width: 100%;
+    }
+}

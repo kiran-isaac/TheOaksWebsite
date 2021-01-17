@@ -86,5 +86,3 @@ app.post("/login", async (req, res) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })
-
-module.exports.handler = serverless(app);

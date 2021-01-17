@@ -1,0 +1,241 @@
+@font-face {
+  font-family: kristen;
+  src: url("../KRISTEN ITC.ttf");
+}
+
+@font-face {
+  font-family: dosis;
+  src: url("../DOSIS.ttf");
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: dosis;
+  height: 100%;
+}
+
+body > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: calc(100% - 141px);
+}
+
+/*header*/
+header {
+  background-image: url(../header.png);
+  font-family: kristen;
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #218C3C;
+  position: fixed;
+  z-index: 2;
+}
+
+header a#clubname {
+  text-decoration: none;
+  width: 340px;
+  margin-left: 10px;
+  font-size: 40px;
+  line-height: 80px;
+  color: #60038b;
+}
+
+header nav img {
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  height: 40px;
+  border: 3px solid #4e4e4e;
+  border-radius: 15px;
+}
+
+header nav img:hover {
+  cursor: pointer;
+}
+
+header nav ul {
+  z-index: 1;
+  position: fixed;
+  top: 81px;
+  list-style-type: none;
+  text-align: right;
+  right: -286px;
+  background-color: rgba(0, 128, 0, 0.7);
+  margin: 0px;
+  width: 245px;
+  -webkit-transition: right .5s;
+  transition: right .5s;
+  height: 100%;
+  border-left: 1px solid black;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+  font-size: 30px;
+  line-height: 70px;
+  font-weight: 700;
+}
+
+header nav ul li a#current {
+  font-weight: lighter;
+  color: #60038b;
+}
+
+/*aside*/
+aside {
+  float: right;
+  margin-left: 10px;
+  width: 303px;
+}
+
+aside img {
+  width: 300px;
+  padding-bottom: 20px;
+}
+
+aside div#corona {
+  padding: 10px;
+  margin: 0;
+  border: 2px solid red;
+  text-align: center;
+  position: relative;
+  bottom: 4px;
+}
+
+aside div#corona h1 {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+aside div#corona p {
+  font-size: larger;
+}
+
+/*body*/
+#body h1 {
+  font-size: 50px;
+  margin: 0;
+  padding: 20px 0px;
+  font-weight: 300;
+  text-align: center;
+}
+
+#content {
+  padding-top: 81px;
+  overflow-x: hidden;
+}
+
+#leftImage {
+  width: 250px;
+  margin: auto;
+  display: block;
+}
+
+section#body {
+  margin-left: 10px;
+}
+
+section#body p {
+  font-family: dosis;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+section#body div h2 {
+  padding-top: 20px;
+  font-size: 34px;
+  margin: 0;
+}
+
+img#whatthechildrensay {
+  width: 50%;
+}
+
+/*What we do list*/
+section#body div#list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+section#body div#list ul li h3 {
+  padding-top: 10px;
+}
+
+/*footer*/
+footer {
+  margin-top: auto;
+  width: 100%;
+  height: 130px;
+  background-color: #218C3C;
+  text-align: center;
+  border-top: 1px solid black;
+  padding: 5px 0px;
+}
+
+footer p {
+  color: #ccc;
+}
+
+footer ul#social {
+  float: right;
+}
+
+footer ul#social li {
+  display: inline;
+  padding-right: 20px;
+}
+
+/**
+*
+* Testing
+*
+**/
+@media (max-width: 768px) {
+  img#whatthechildrensay {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  aside {
+    width: 100%;
+  }
+  aside img {
+    width: 100%;
+    border: none;
+  }
+  #body {
+    text-align: center;
+  }
+  header a#clubname {
+    font-size: 30px;
+  }
+  footer {
+    height: 170px;
+  }
+}
+
+@media (max-width: 360px) {
+  header a#clubname {
+    font-size: 20px;
+  }
+  #body h1 {
+    font-size: 40px;
+  }
+  header nav ul li a {
+    line-height: 60px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

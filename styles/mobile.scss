@@ -1,4 +1,12 @@
-@media screen and (max-width: 654px) {
+@import "./breakpoint.scss";
+
+@include media("<=tablet") {
+    img#whatthechildrensay {
+        width: 100%;
+    }
+}
+
+@include media("<=600px") {
     aside {
         width: 100%;
     }
@@ -16,20 +24,12 @@
         font-size: 30px;
     }
 
-    #mobiledisplay {
-        display: inline-block;
-        width: 100%;
-        position: absolute;
-        top: 400px;
-        z-index: 1;
-    }
-
     footer {
         height: 170px;
     }
 }
 
-@media screen and (max-width: 374px) {
+@include media("<=phone") {
     header a#clubname {
         font-size: 20px;
     }
@@ -40,11 +40,5 @@
 
     header nav ul li a {
         line-height: 60px;
-    }
-}
-
-@media screen and (max-width: 750px) {
-    img#whatthechildrensay {
-        width: 100%;
     }
 }

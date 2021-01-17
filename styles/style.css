@@ -1,3 +1,8 @@
+/**
+*
+* Testing
+*
+**/
 @font-face {
   font-family: kristen;
   src: url("../assets/KRISTEN ITC.ttf");
@@ -163,78 +168,6 @@ img#whatthechildrensay {
   width: 50%;
 }
 
-/*gallery
-        #arrows img {
-        position: absolute;
-        z-index: 10;
-        width: 4%;
-        opacity: 0.8;
-        margin: auto;
-        display: block;
-        cursor: pointer;
-    }
-
-    #arrows img#right {
-        right:0;
-        z-index: 11;
-    }
-
-    #arrows img#left {
-        transform: rotate(180deg);
-        left: 0;
-        z-index: 11;
-    }
-
-    #mobiledisplay {
-        display: none;
-    }
-
-    ul#slideshow {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        display:inline-block;
-        white-space:nowrap;
-    }
-
-    ul#slideshow li img:not(#gallery2) {
-        width: 60%;
-        z-index: 10;
-    }
-
-    ul#slideshow li#center {
-        width: 60%;
-        height:600px;
-        display: block;
-        margin: auto;
-    }
-
-    ul#slideshow li img {
-        transition: opacity .2s;
-    }
-
-    ul#slideshow li img#gallery2 {
-        width: 100%;
-        border-bottom: 4px solid black;
-    }
-
-    ul#slideshow li img#gallery1 {
-        position: absolute;
-        display: block;
-        left: -39%;
-        border-right: 5px solid black;
-        cursor: pointer;
-    }
-
-    ul#slideshow li img#gallery3 {
-        position: absolute;
-        display: block;
-        right: -40%;
-        border-left: 5px solid black;
-        cursor: pointer;
-    }
-
-    */
 /*What we do list*/
 section#body div#list ul {
   list-style-type: none;
@@ -267,5 +200,42 @@ footer ul#social {
 footer ul#social li {
   display: inline;
   padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  img#whatthechildrensay {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  aside {
+    width: 100%;
+  }
+  aside img {
+    width: 100%;
+    border: none;
+  }
+  #body {
+    text-align: center;
+  }
+  header a#clubname {
+    font-size: 30px;
+  }
+  footer {
+    height: 170px;
+  }
+}
+
+@media (max-width: 360px) {
+  header a#clubname {
+    font-size: 20px;
+  }
+  #body h1 {
+    font-size: 40px;
+  }
+  header nav ul li a {
+    line-height: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

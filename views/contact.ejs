@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+    
+    <body>
+        <%- include('partials/header.ejs', {pages : pages, current : "/"}) %>
+        <article>
+            <%- include('partials/aside.ejs') %>
+
+            <section id="body">
+                <h1>Contact us</h1>
+                <p>For general enquiries or to register for a place at your chosen club, please contact the General Manager (<a href="mailto:office@theoakschildcare.co.uk">email:office@theoakschildcare.co.uk</a>)
+                <br>Tel 0118 933 2960 10am-2pm weekdays</p>
+            </section>
+
+        </article>
+    </body>
+
+    <%- include('partials/footer.ejs') %>
+</html>

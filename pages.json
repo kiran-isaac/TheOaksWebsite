@@ -1,0 +1,30 @@
+[
+    {
+       "link": "/",
+       "name" : "Home"
+    },
+    {
+       "link": "/about",
+       "name" : "About Us"
+    },
+    {
+       "link": "/clubs",
+       "name" : "Our Clubs"
+    },
+    {
+       "link": "/join",
+       "name" : "Work With Us"
+    },
+    {
+       "link": "/register",
+       "name" : "Register"
+    },
+    {
+       "link": "/contact",
+       "name" : "Contact Us"
+    },
+    {
+        "link" : "/staff",
+        "name" : "Staff"
+    }
+]

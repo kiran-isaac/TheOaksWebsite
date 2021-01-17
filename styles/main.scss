@@ -17,17 +17,16 @@ body {
     padding: 0;
     font-family: dosis;
     height: 100%;
+    > div {
+        display: flex;
+        flex-direction: column;
+    
+        min-height: calc(100% - 141px);
+    }
 }
 
 p {
     line-height: larger;
-}
-
-body > div {
-    display: flex;
-    flex-direction: column;
-
-    min-height: calc(100% - 141px);
 }
 
 /*header*/

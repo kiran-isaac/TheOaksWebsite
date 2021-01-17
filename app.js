@@ -1,10 +1,11 @@
 const express = require("express");
 const { readFileSync } = require("fs");
-const app = express();
 const path = require("path");
 const SHA1 = require("crypto-js").SHA1;
-
+const serverless = require("serverless-http");
 const session = require("express-session");
+
+const app = express();
 
 const port = process.env.PORT || 8080;
 
@@ -26,6 +27,13 @@ const pages = JSON.parse(readFileSync("views/pages.json"));
 const staff = JSON.parse(readFileSync("views/staff.json"))
 
 const staffOnlyPages = staff.pages;
+
+const requireLogin = (req, res, next) => {
+    if (!req.session.loggedIn) {
+        return res.redirect('/login')
+    }
+    next();
+}
 
 app.get("/", (req, res) => {
     res.render("index", {pages : pages})
@@ -51,16 +59,16 @@ app.get("/register", (req, res) => {
     res.render("register", {pages : pages})
 });
 
-app.get("/staff/policies", (req, res) => {
-    res.render("staff/policies", {pages : pages})
-})
-
-app.get("/staff", (req, res) => {
+app.get("/staff/policies", requireLogin, (req, res) => {
     if (req.session.loggedIn) {
-        res.redirect("/staff/policies");
+        res.render("staff/policies", {pages : pages})
     } else {
         res.redirect("/login");
     };
+});
+
+app.get("/staff", requireLogin, (req, res) => {
+    res.render("staff/staff", {pages : pages});
 });
 
 app.get("/login", (req, res) => {
@@ -68,7 +76,6 @@ app.get("/login", (req, res) => {
 })
 
 app.post("/login", async (req, res) => {
-    console.log(req.body.password);
     if (SHA1(req.body.password).toString() == staff.password) {
         req.session.loggedIn = true;
         req.session.cookie.maxAge = 60 * 60 * 1000;
@@ -79,3 +86,5 @@ app.post("/login", async (req, res) => {
 app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })
+
+module.exports.handler = serverless(app);

@@ -4,8 +4,6 @@ var menu = document.getElementById("links");
 let menuOpen = false;
 
 function menuToggle() {
-    
-
     if (!menuOpen) {
         menu.style.right = "0px";
     } else {

@@ -17,9 +17,6 @@ body {
   padding: 0;
   font-family: dosis;
   height: 100%;
-}
-
-body > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

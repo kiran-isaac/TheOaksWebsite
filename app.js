@@ -60,15 +60,11 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/staff/policies", requireLogin, (req, res) => {
-    if (req.session.loggedIn) {
-        res.render("staff/policies", {pages : pages})
-    } else {
-        res.redirect("/login");
-    };
+    res.render("staff/policies", {pages : pages})
 });
 
 app.get("/staff", requireLogin, (req, res) => {
-    res.render("staff/staff", {pages : pages});
+    res.render("staff/staff", {pages : pages})
 });
 
 app.get("/login", (req, res) => {
@@ -81,6 +77,10 @@ app.post("/login", async (req, res) => {
         req.session.cookie.maxAge = 60 * 60 * 1000;
     };
     res.redirect("/staff");
+})
+
+app.get("*", (req, res) => {
+    res.redirect("/");
 })
 
 app.listen(port, () => {

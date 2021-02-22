@@ -1,8 +1,7 @@
 const express = require("express");
 const { readFileSync } = require("fs");
 const path = require("path");
-const SHA1 = require("crypto-js").SHA1;
-const serverless = require("serverless-http");
+const SHA256 = require("crypto-js").SHA256;
 const session = require("express-session");
 
 const app = express();
@@ -24,9 +23,7 @@ app.use(express.static("public"))
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
 const pages = JSON.parse(readFileSync("views/pages.json"));
-const staff = JSON.parse(readFileSync("views/staff.json"))
-
-const staffOnlyPages = staff.pages;
+const staff = JSON.parse(readFileSync("views/staff.json"));
 
 const requireLogin = (req, res, next) => {
     if (!req.session.loggedIn) {
@@ -60,11 +57,11 @@ app.get("/register", (req, res) => {
 });
 
 app.get("/staff/policies", requireLogin, (req, res) => {
-    res.render("staff/policies", {pages : pages})
+    res.render("staff/policies", {pages : staff.pages})
 });
 
 app.get("/staff", requireLogin, (req, res) => {
-    res.render("staff/staff", {pages : pages})
+    res.render("staff/staff", {pages : staff.pages})
 });
 
 app.get("/login", (req, res) => {
@@ -72,9 +69,9 @@ app.get("/login", (req, res) => {
 })
 
 app.post("/login", async (req, res) => {
-    if (SHA1(req.body.password).toString() == staff.password) {
+    if (SHA256(req.body.password).toString().toUpperCase() == staff.password) {
         req.session.loggedIn = true;
-        req.session.cookie.maxAge = 60 * 60 * 1000;
+        req.session.cookie.maxAge = (60 * 1000);
     };
     res.redirect("/staff");
 })

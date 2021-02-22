@@ -1,6 +1,14 @@
 {
-    "password" : "5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8",
+    "password" : "5E884898DA28047151D0E56F8DC6292773603D0D6AABBDD62A11EF721D1542D8",
     "pages" : [
+        {
+            "link": "/",
+            "name" : "Home"
+        },
+        {
+            "link": "/staff",
+            "name" : "Staff Home"
+        },
         {
         "link": "/staff/policies",
         "name" : "Policies"

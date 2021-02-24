@@ -69,7 +69,7 @@ app.get("/login", (req, res) => {
 })
 
 app.post("/login", async (req, res) => {
-    if (SHA256(req.body.password).toString().toUpperCase() == staff.password) {
+    if (SHA256(req.body.password).toString() == staff.password) {
         req.session.loggedIn = true;
         req.session.cookie.maxAge = (60 * 1000);
     };

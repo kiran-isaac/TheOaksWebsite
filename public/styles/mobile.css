@@ -15,10 +15,10 @@
   }
   aside img {
     width: 100%;
-    border: none;
   }
-  #body {
+  section#body {
     text-align: center;
+    margin-left: 0px;
   }
   header a#clubname {
     font-size: 30px;

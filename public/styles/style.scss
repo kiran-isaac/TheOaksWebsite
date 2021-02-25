@@ -1,0 +1,243 @@
+@font-face {
+    font-family: kristen;
+    src: url("../KRISTEN\ ITC.ttf");
+}
+
+@font-face {
+    font-family: dosis;
+    src: url("../DOSIS.ttf");
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: dosis;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100%
+}
+
+/*header*/
+header {
+    background-image:  url(../header.png);
+    font-family: kristen;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid #218C3C;
+    position: fixed;
+    z-index: 2;
+    a#clubname {
+        text-decoration: none;
+        width: 340px;
+        margin-left: 10px;
+        font-size: 40px;
+        line-height: 80px;
+        color: rgb(96, 3, 139);
+
+        @media (max-width: 500px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 25px;
+        }
+
+        @media (max-width: 310px) {
+            font-size: 20px;
+        }
+    }
+
+    
+
+    nav {
+        div#right-menu {
+            height: 100%;
+            background-color: rgba(33, 140, 60, 0.8);
+            right: -286px;
+            margin: 0px;
+            width: 280px;
+            transition: right .5s;
+            border-left: 1px solid black;
+            z-index: 1;
+            position: fixed;
+            top: 81px;
+
+            @media (max-height: 600px) {
+                overflow-y: scroll;
+            }
+
+            ul {
+                padding: 0px 5px;
+                padding-bottom: 70px;
+                list-style-type: none;
+                text-align: right;
+    
+                li {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        margin-right: 10px;
+                        font-size: 30px;
+                        line-height: 70px;
+                        font-weight: 700;
+    
+                        @media (max-width: 450px) {
+                            line-height: 60px;
+                        }
+                    }
+    
+                    a#current {
+                        font-weight: lighter;
+                        color: rgb(96, 3, 139);
+                    }
+                }
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 19px;
+            right: 10px;
+            height: 36px;
+            border: 3px solid rgb(78, 78, 78);
+            border-radius: 15px;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/*body*/
+article {
+    margin-left: 10px;
+    width: 70%;
+    margin: 0px auto;
+    padding-top: 81px;
+    overflow-x: hidden;
+    padding-bottom: 160px;
+
+    @media (max-width: 400px) {
+        padding-bottom: 180px;
+    }
+
+    @media (max-width: 400px) {
+        padding-bottom: 200px;
+    }
+
+    @media (max-width: 1000px) {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 50px;
+        margin: 0;
+        padding: 20px 0px;
+        font-weight: 300;
+        text-align: center;
+
+        @media (max-width: 450px) {
+            font-size: 50px;
+            padding-top: 0px;
+        }
+    }
+
+    p {
+        font-family: dosis;
+        font-size: 20px;
+        padding-right: 10px;
+    }
+
+    div h2 {
+        padding-top: 20px;
+        font-size: 34px;
+        margin: 0;
+    }
+
+    img#whatthechildrensay {
+        width: 100%;
+    }
+
+    form {
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 40px 10px 40px;
+
+        input#password {
+            width: calc(100% - 8px);
+            height: 40px;
+        }
+
+        input#submit {
+            width: 100%;
+            height: 40px;
+        }
+    }
+
+    // What we do list
+    div#list ul {
+        list-style-type: none;
+        padding: 0;
+    
+        li h3 {
+            padding-top: 10px;
+        }
+    }
+
+    // logo
+    div#logoContainer {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+
+        img {
+            width : 50%;
+            
+            @media (max-width: 650px) {
+                width: 100%;
+            }
+
+            @media (min-width: 1300px) {
+                width: 40%;
+            }
+        }
+    }
+    
+}
+/*footer*/
+footer {
+    padding: 6px;
+    height: 150px;
+    width: calc(100% - 12px);
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background-color: #218C3C;
+
+    p {
+        margin: 0;
+        font-size: larger;
+        color: #ccc;
+    }
+
+    footer {
+        height: 180px;
+    }
+
+    @media (max-width: 550px) {
+        height: 180px;
+    }
+
+    @media (max-width: 400px) {
+        height: 200px;
+    }
+}

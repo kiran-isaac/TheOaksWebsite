@@ -1,0 +1,21 @@
+<header>
+    <a href="/" id="clubname">The Oaks Childcare</a>
+
+    <nav>
+        <img id="menu-button" src="<%= locals.root ? root : "" %>menu.png">
+
+        <div id="right-menu">
+            <ul id="links">
+                <% for (let page of pages) { %> 
+                    <li><a 
+                    <% if (page.link == current) { %> 
+                        id="current" 
+                    <% } else { %> 
+                        href=<%= page.link %> 
+                    <% } %> 
+                    ><%= page.name %>  ></a></li>
+                <% } %> 
+            </ul>
+        </div>
+    </nav>
+</header>

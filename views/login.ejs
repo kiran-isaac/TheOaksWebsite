@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <%- include('partials/head.ejs') %>
+    
+    <body>
+        <%- include('partials/header.ejs', {pages : pages, current : "/staff"}) %>
+        <article>
+            <h1>Log In</h1>
+            <p>Log in to access staff only content</p>
+            <form action="/login" method="post">
+                <input id="password" type="password" name="password" placeholder="Password">
+                <div></div>
+                <input id="submit" type="submit">
+            </form>
+        </article>
+    </body>
+
+    <%- include('partials/footer.ejs') %>
+</html>

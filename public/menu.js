@@ -1,5 +1,5 @@
 var button = document.getElementById("menu-button");
-var menu = document.getElementById("links");
+var menu = document.getElementById("right-menu");
 
 let menuOpen = false;
 

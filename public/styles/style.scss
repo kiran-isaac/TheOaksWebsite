@@ -93,7 +93,8 @@ article {
     margin: 0px auto;
     padding-top: 81px;
     overflow-x: hidden;
-    padding-bottom: 350px;
+    padding-bottom: 180px;
+
     h1 {
         font-size: 50px;
         margin: 0;
@@ -114,6 +115,19 @@ article {
         margin: 0;
     }
 
+    form {
+        input#password {
+            width: 99.5%;
+            height: 40px;
+        }
+
+        input#submit {
+            width: 100%;
+            margin: 5px 0px;
+            height: 40px;
+        }
+    }
+
     /*What we do list*/
     div#list ul {
         list-style-type: none;
@@ -132,42 +146,18 @@ img#whatthechildrensay {
 
 /*footer*/
 footer {
-    height: 350px;
-    width: 100%;
+    padding: 6px;
+    height: 150px;
+    width: calc(100% - 12px);
     position: absolute;
     bottom: 0;
+    text-align: center;
+    background-color: #218C3C;
 
     p {
-        font-size: larger;
-    }
-    
-    #footer {
-        padding-top: 5px;
-        text-align: center;
-        height: 49%;
-        background-color: #218C3C;
-        p {
-            color: #ccc;
-        }
-    
-    }
-
-    div#covid {
-        padding: 0px 10px;
         margin: 0;
-        border: 2px solid red;
-        text-align: center;
-        position: relative;
-        bottom: 4px;
-
-        h1 {
-            text-transform: uppercase;
-        }
-        height: 49%;
-        
-        h1 {
-            margin-top: 0px;
-        }
+        font-size: larger;
+        color: #ccc;
     }
 }
 

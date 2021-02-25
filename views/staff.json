@@ -3,15 +3,19 @@
     "pages" : [
         {
             "link": "/",
-            "name" : "Home"
+            "name" : "Back"
         },
         {
             "link": "/staff",
             "name" : "Staff Home"
         },
         {
-        "link": "/staff/policies",
-        "name" : "Policies"
+            "link": "/staff/policies",
+            "name" : "Policies"
+        },
+        {
+            "link": "/staff/forum",
+            "name" : "Forum"
         }
     ]
 }

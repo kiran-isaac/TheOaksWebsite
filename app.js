@@ -60,6 +60,10 @@ app.get("/staff/policies", requireLogin, (req, res) => {
     res.render("staff/policies", {pages : staff.pages})
 });
 
+app.get("/staff/forum", requireLogin, (req, res) => {
+    res.render("staff/forum", {pages : staff.pages})
+});
+
 app.get("/staff", requireLogin, (req, res) => {
     res.render("staff/staff", {pages : staff.pages})
 });

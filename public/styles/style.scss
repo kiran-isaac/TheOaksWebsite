@@ -38,7 +38,16 @@ header {
         font-size: 40px;
         line-height: 80px;
         color: rgb(96, 3, 139);
+
+        @media (max-width: 500px) {
+            font-size: 30px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 25px;
+        }
     }
+
     nav {
         img {
             position: absolute;
@@ -75,6 +84,10 @@ header {
                     font-size: 30px;
                     line-height: 70px;
                     font-weight: 700;
+
+                    @media (max-width: 450px) {
+                        line-height: 60px;
+                    }
                 }
 
                 a#current {
@@ -93,7 +106,19 @@ article {
     margin: 0px auto;
     padding-top: 81px;
     overflow-x: hidden;
-    padding-bottom: 180px;
+    padding-bottom: 160px;
+
+    @media (max-width: 400px) {
+        padding-bottom: 180px;
+    }
+
+    @media (max-width: 400px) {
+        padding-bottom: 200px;
+    }
+
+    @media (max-width: 1000px) {
+        text-align: center;
+    }
 
     h1 {
         font-size: 50px;
@@ -101,6 +126,10 @@ article {
         padding: 20px 0px;
         font-weight: 300;
         text-align: center;
+
+        @media (max-width: 450px) {
+            font-size: 50px;
+        }
     }
 
     p {
@@ -113,6 +142,10 @@ article {
         padding-top: 20px;
         font-size: 34px;
         margin: 0;
+    }
+
+    img#whatthechildrensay {
+        width: 100%;
     }
 
     form {
@@ -128,7 +161,7 @@ article {
         }
     }
 
-    /*What we do list*/
+    // What we do list
     div#list ul {
         list-style-type: none;
         padding: 0;
@@ -137,13 +170,28 @@ article {
             padding-top: 10px;
         }
     }
+
+    // logo
+    div#logoContainer {
+        margin-top: 50px;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align: center;
+
+        img {
+            width : 50%;
+            
+            @media (max-width: 650px) {
+                width: 100%;
+            }
+
+            @media (min-width: 1300px) {
+                width: 40%;
+            }
+        }
+    }
+    
 }
-
-img#whatthechildrensay {
-    width: 100%;
-}
-
-
 /*footer*/
 footer {
     padding: 6px;
@@ -159,6 +207,16 @@ footer {
         font-size: larger;
         color: #ccc;
     }
-}
 
-@import "./mobile.scss" 
+    footer {
+        height: 180px;
+    }
+
+    @media (max-width: 550px) {
+        height: 180px;
+    }
+
+    @media (max-width: 400px) {
+        height: 200px;
+    }
+}

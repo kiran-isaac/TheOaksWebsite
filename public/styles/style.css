@@ -47,6 +47,18 @@ header a#clubname {
   color: #60038b;
 }
 
+@media (max-width: 500px) {
+  header a#clubname {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 400px) {
+  header a#clubname {
+    font-size: 25px;
+  }
+}
+
 header nav img {
   position: absolute;
   top: 19px;
@@ -85,6 +97,12 @@ header nav ul li a {
   font-weight: 700;
 }
 
+@media (max-width: 450px) {
+  header nav ul li a {
+    line-height: 60px;
+  }
+}
+
 header nav ul li a#current {
   font-weight: lighter;
   color: #60038b;
@@ -97,8 +115,25 @@ article {
   margin: 0px auto;
   padding-top: 81px;
   overflow-x: hidden;
-  padding-bottom: 180px;
-  /*What we do list*/
+  padding-bottom: 160px;
+}
+
+@media (max-width: 400px) {
+  article {
+    padding-bottom: 180px;
+  }
+}
+
+@media (max-width: 400px) {
+  article {
+    padding-bottom: 200px;
+  }
+}
+
+@media (max-width: 1000px) {
+  article {
+    text-align: center;
+  }
 }
 
 article h1 {
@@ -107,6 +142,12 @@ article h1 {
   padding: 20px 0px;
   font-weight: 300;
   text-align: center;
+}
+
+@media (max-width: 450px) {
+  article h1 {
+    font-size: 50px;
+  }
 }
 
 article p {
@@ -119,6 +160,10 @@ article div h2 {
   padding-top: 20px;
   font-size: 34px;
   margin: 0;
+}
+
+article img#whatthechildrensay {
+  width: 100%;
 }
 
 article form input#password {
@@ -141,8 +186,27 @@ article div#list ul li h3 {
   padding-top: 10px;
 }
 
-img#whatthechildrensay {
+article div#logoContainer {
+  margin-top: 50px;
+  margin-bottom: 20px;
   width: 100%;
+  text-align: center;
+}
+
+article div#logoContainer img {
+  width: 50%;
+}
+
+@media (max-width: 650px) {
+  article div#logoContainer img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1300px) {
+  article div#logoContainer img {
+    width: 40%;
+  }
 }
 
 /*footer*/
@@ -162,45 +226,19 @@ footer p {
   color: #ccc;
 }
 
-/**
-*
-* Testing
-*
-**/
-@media (max-width: 768px) {
-  img#whatthechildrensay {
-    width: 100%;
-  }
+footer footer {
+  height: 180px;
 }
 
-@media (max-width: 600px) {
-  aside {
-    width: 100%;
-  }
-  aside img {
-    width: 100%;
-  }
-  section#body {
-    text-align: center;
-    margin-left: 0px;
-  }
-  header a#clubname {
-    font-size: 30px;
-  }
+@media (max-width: 550px) {
   footer {
-    height: 170px;
+    height: 180px;
   }
 }
 
-@media (max-width: 360px) {
-  header a#clubname {
-    font-size: 20px;
-  }
-  #body h1 {
-    font-size: 40px;
-  }
-  header nav ul li a {
-    line-height: 60px;
+@media (max-width: 400px) {
+  footer {
+    height: 200px;
   }
 }
 /*# sourceMappingURL=style.css.map */

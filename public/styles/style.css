@@ -59,6 +59,59 @@ header a#clubname {
   }
 }
 
+@media (max-width: 310px) {
+  header a#clubname {
+    font-size: 20px;
+  }
+}
+
+header nav div#right-menu {
+  height: 100%;
+  background-color: rgba(33, 140, 60, 0.8);
+  right: -286px;
+  margin: 0px;
+  width: 260px;
+  -webkit-transition: right .5s;
+  transition: right .5s;
+  border-left: 1px solid black;
+  z-index: 1;
+  position: fixed;
+  top: 81px;
+}
+
+@media (max-height: 600px) {
+  header nav div#right-menu {
+    overflow-y: scroll;
+  }
+}
+
+header nav div#right-menu ul {
+  padding: 0px 5px;
+  padding-bottom: 70px;
+  list-style-type: none;
+  text-align: right;
+}
+
+header nav div#right-menu ul li a {
+  text-decoration: none;
+  color: white;
+  margin-right: 10px;
+  font-size: 30px;
+  line-height: 70px;
+  font-weight: 700;
+}
+
+@media (max-width: 450px) {
+  header nav div#right-menu ul li a {
+    line-height: 60px;
+  }
+}
+
+header nav div#right-menu ul li a#current {
+  font-weight: lighter;
+  color: #60038b;
+}
+
 header nav img {
   position: absolute;
   top: 19px;
@@ -70,42 +123,6 @@ header nav img {
 
 header nav img:hover {
   cursor: pointer;
-}
-
-header nav ul {
-  z-index: 1;
-  position: fixed;
-  top: 81px;
-  list-style-type: none;
-  text-align: right;
-  right: -286px;
-  background-color: rgba(33, 140, 60, 0.8);
-  margin: 0px;
-  width: 245px;
-  -webkit-transition: right .5s;
-  transition: right .5s;
-  height: 100%;
-  border-left: 1px solid black;
-}
-
-header nav ul li a {
-  text-decoration: none;
-  color: white;
-  margin-right: 10px;
-  font-size: 30px;
-  line-height: 70px;
-  font-weight: 700;
-}
-
-@media (max-width: 450px) {
-  header nav ul li a {
-    line-height: 60px;
-  }
-}
-
-header nav ul li a#current {
-  font-weight: lighter;
-  color: #60038b;
 }
 
 /*body*/
@@ -147,6 +164,7 @@ article h1 {
 @media (max-width: 450px) {
   article h1 {
     font-size: 50px;
+    padding-top: 0px;
   }
 }
 
@@ -166,14 +184,23 @@ article img#whatthechildrensay {
   width: 100%;
 }
 
+article form {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 40px 10px 40px;
+      grid-template-rows: 40px 10px 40px;
+}
+
 article form input#password {
-  width: 99.5%;
+  width: calc(100% - 8px);
   height: 40px;
 }
 
 article form input#submit {
   width: 100%;
-  margin: 5px 0px;
   height: 40px;
 }
 

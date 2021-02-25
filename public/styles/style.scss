@@ -46,9 +46,59 @@ header {
         @media (max-width: 400px) {
             font-size: 25px;
         }
+
+        @media (max-width: 310px) {
+            font-size: 20px;
+        }
     }
 
+    
+
     nav {
+        div#right-menu {
+            height: 100%;
+            background-color: rgba(33, 140, 60, 0.8);
+            right: -286px;
+            margin: 0px;
+            width: 260px;
+            transition: right .5s;
+            border-left: 1px solid black;
+            z-index: 1;
+            position: fixed;
+            top: 81px;
+
+            @media (max-height: 600px) {
+                overflow-y: scroll;
+            }
+
+            ul {
+                padding: 0px 5px;
+                padding-bottom: 70px;
+                list-style-type: none;
+                text-align: right;
+    
+                li {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        margin-right: 10px;
+                        font-size: 30px;
+                        line-height: 70px;
+                        font-weight: 700;
+    
+                        @media (max-width: 450px) {
+                            line-height: 60px;
+                        }
+                    }
+    
+                    a#current {
+                        font-weight: lighter;
+                        color: rgb(96, 3, 139);
+                    }
+                }
+            }
+        }
+
         img {
             position: absolute;
             top: 19px;
@@ -59,41 +109,6 @@ header {
 
             &:hover {
                 cursor: pointer;
-            }
-        }
-
-        ul {
-            z-index: 1;
-            position: fixed;
-            top: 81px;
-            list-style-type: none;
-            text-align: right;
-            right: -286px;
-            background-color: rgba(33, 140, 60, 0.8);
-            margin: 0px;
-            width: 245px;
-            transition: right .5s;
-            height: 100%;
-            border-left: 1px solid black;
-
-            li {
-                a {
-                    text-decoration: none;
-                    color: white;
-                    margin-right: 10px;
-                    font-size: 30px;
-                    line-height: 70px;
-                    font-weight: 700;
-
-                    @media (max-width: 450px) {
-                        line-height: 60px;
-                    }
-                }
-
-                a#current {
-                    font-weight: lighter;
-                    color: rgb(96, 3, 139);
-                }
             }
         }
     }
@@ -129,6 +144,7 @@ article {
 
         @media (max-width: 450px) {
             font-size: 50px;
+            padding-top: 0px;
         }
     }
 
@@ -149,14 +165,19 @@ article {
     }
 
     form {
+        text-align: center;
+
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 40px 10px 40px;
+
         input#password {
-            width: 99.5%;
+            width: calc(100% - 8px);
             height: 40px;
         }
 
         input#submit {
             width: 100%;
-            margin: 5px 0px;
             height: 40px;
         }
     }

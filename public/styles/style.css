@@ -233,25 +233,25 @@ article div#list ul li h3 {
 }
 
 article div#logoContainer {
-  margin-top: 50px;
+  margin-top: 90px;
   margin-bottom: 20px;
   width: 100%;
   text-align: center;
 }
 
 article div#logoContainer img {
-  width: 50%;
+  width: 20%;
 }
 
 @media (max-width: 650px) {
   article div#logoContainer img {
-    width: 100%;
+    width: 60%;
   }
 }
 
 @media (min-width: 1300px) {
   article div#logoContainer img {
-    width: 30%;
+    width: 13%;
   }
 }
 

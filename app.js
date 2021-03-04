@@ -6,7 +6,7 @@ const session = require("express-session");
 
 const app = express();
 
-const port = 5000;
+const port = 5000 || process.env.PORT;
 
 app.use(express.urlencoded({extended : true}));
 

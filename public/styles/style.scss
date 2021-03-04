@@ -160,8 +160,23 @@ article {
         margin: 0;
     }
 
-    img#whatthechildrensay {
+    div#whatthechildrensay {
+        margin-top: 50px;
+        margin-bottom: 20px;
         width: 100%;
+        text-align: center;
+
+        img {
+            width : 50%;
+            
+            @media (max-width: 650px) {
+                width: 100%;
+            }
+
+            @media (min-width: 1300px) {
+                width: 40%;
+            }
+        }
     }
 
     form {
@@ -207,7 +222,7 @@ article {
             }
 
             @media (min-width: 1300px) {
-                width: 40%;
+                width: 30%;
             }
         }
     }

@@ -180,8 +180,27 @@ article div h2 {
   margin: 0;
 }
 
-article img#whatthechildrensay {
+article div#whatthechildrensay {
+  margin-top: 50px;
+  margin-bottom: 20px;
   width: 100%;
+  text-align: center;
+}
+
+article div#whatthechildrensay img {
+  width: 50%;
+}
+
+@media (max-width: 650px) {
+  article div#whatthechildrensay img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1300px) {
+  article div#whatthechildrensay img {
+    width: 40%;
+  }
 }
 
 article form {
@@ -232,7 +251,7 @@ article div#logoContainer img {
 
 @media (min-width: 1300px) {
   article div#logoContainer img {
-    width: 40%;
+    width: 30%;
   }
 }
 

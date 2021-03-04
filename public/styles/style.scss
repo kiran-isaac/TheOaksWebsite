@@ -202,9 +202,19 @@ article {
         list-style-type: none;
         padding: 0;
         margin-left: 5%;
+        
+
+        h3 {
+            margin: 0px;
+        }
+
+        p {
+            margin: 10px 0px;
+            font-size: 17px;
+        }
 
         @media (max-width: 1000px) {
-            margin-left: 0;;
+            margin-left: 0;
         }
     }
 

@@ -229,6 +229,15 @@ article div#list ul {
   margin-left: 5%;
 }
 
+article div#list ul h3 {
+  margin: 0px;
+}
+
+article div#list ul p {
+  margin: 10px 0px;
+  font-size: 17px;
+}
+
 @media (max-width: 1000px) {
   article div#list ul {
     margin-left: 0;

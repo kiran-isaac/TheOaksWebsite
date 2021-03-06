@@ -289,9 +289,9 @@ footer span {
   color: #aaa;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 1100px) {
   footer {
-    height: 180px;
+    height: 130px;
   }
 }
 
@@ -301,9 +301,9 @@ footer span {
   }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 550px) {
   footer {
-    height: 130px;
+    height: 180px;
   }
 }
 /*# sourceMappingURL=style.css.map */
